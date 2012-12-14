@@ -1,0 +1,244 @@
+@import 'compass'
+
+$base-font-size: 10px
+$base-line-height: 32.4px
+
+
+*
+  border: 0
+  list-style: none
+  margin: 0
+  padding: 0
+
+body
+  // background: #FFF
+  // +debug-vertical-alignment()
+  // background-size: 100% 3.24em
+  // background-position: 0 1px
+  color: #222
+  font: 62.5% 'Lucida Grande', Lucida, Arial, sans-serif
+  margin: 0 5% 0 25%
+  position: relative
+
+  @media (max-width: 800px)
+    margin: 0
+
+  @media (max-width: 1000px)
+    font-size: 57.5%
+
+  @media (min-width: 1200px)
+    font-size: 67.5%
+
+  @media (min-width: 1400px)
+    font-size: 72.5%
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, progress, section, summary, video
+  display: block
+
+.animate-scroll
+  +transition(transform 1s)
+
+p,
+ul,
+ol,
+th,
+td,
+dt,
+dd,
+hr
+  font-size: 1.8em
+  line-height: 1.8em
+
+  p,
+  ul,
+  ol
+    font-size: 1em
+
+p,
+ul,
+ol
+  margin-bottom: 1.8em
+
+h1
+  font-size: 3.6em
+  line-height: 1.8em
+  padding: 1.1em 1.9em 0.9em
+
+  @media (max-width: 800px)
+    padding-left: 0.5555555556em
+    padding-right: 0.5555555556em
+
+h2
+  font-size: 2.7em
+  line-height: 1.8em
+  margin: 0.375em 0 0.125em
+
+h3
+  font-size: 1.8em
+  line-height: 1.8em
+  margin: 1.8em 0 0
+
+h4
+  font-size: 1.8em
+  font-style: italic
+  font-weight: normal
+  line-height: 1.8em
+  margin: 1.8em 0 0
+
+h2 + h3
+  margin-top: 1.9875em
+
+table
+  border-collapse: collapse
+
+  td
+    padding: 0.45em 0.9em
+
+  tr:nth-child(even) td
+    background: #EEE
+
+ul
+  li
+    list-style: disc
+
+.ratings
+  li
+    list-style: none
+
+dl
+  dt,
+  dd
+    display: inline-block
+    vertical-align: top
+
+  dt
+    margin-right: 0.5em
+    overflow: hidden
+    position: relative
+    white-space: nowrap
+    width: 35%
+
+    &::after
+      color: #CCC
+      content: '· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·'
+      font-size: 0.5em
+      margin-left: 1em
+
+  dd
+    width: 60%
+
+    &:after
+      content: '\A'
+      white-space: pre
+
+  @media (max-width: 800px)
+    dt,
+    dd
+      width: 100%
+
+    dt
+      font-style: italic
+
+      &::after
+        display: none
+
+    dd
+      +box-sizing(border-box)
+      padding-left: 2em
+
+small
+  font-size: 0.55em
+
+a
+  color: #707E9F
+
+  &:visited
+    color: #AD6694
+
+  &:hover
+    color: #222
+
+hr
+  background: transparent
+  height: 0.9em
+  margin: 1.8em 0
+  overflow: hidden
+  position: relative
+
+  &::before
+    color: #CCC
+    content: '· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·'
+    font-size: 0.5em
+    left: 0
+    position: absolute
+    right: 0
+    top: -0.8em
+    white-space: nowrap
+    z-index: 2
+
+  &::after
+    background: #FFF
+    content: '∞'
+    color: #DDD
+    left: 0
+    line-height: 0.9em
+    margin: 0 auto
+    position: absolute
+    text-align: center
+    right: 0
+    top: 0
+    width: 2em
+    z-index: 3
+
+.selfrate
+  color: #999
+  cursor: help
+  font-size: 0.8em
+
+nav.inline-menu
+  font-size: 0.8em
+  left: 5%
+  position: fixed
+  top: 3.25em
+  width: 20%
+
+  li
+    list-style: none
+
+  a
+    background: #F2F2F2
+    color: #222
+    display: block
+    padding: 0.45em
+    text-decoration: none
+
+    &:hover
+      background: #E5E5E5
+      color: #222
+      display: block
+      padding: 0.45em
+      text-decoration: none
+
+  .active a
+    background: #CBCBD6
+
+  @media (max-width: 800px)
+    background: #F2F2F2
+    +box-sizing(border-box)
+    left: auto
+    padding: 2em
+    overflow: hidden
+    position: static
+    top: auto
+    width: 100%
+
+    a
+      background: transparent
+      float: left
+      margin-right: 1em
+
+section
+  padding: 6.48em
+
+  @media (max-width: 800px)
+    padding: 6.48em 2em
